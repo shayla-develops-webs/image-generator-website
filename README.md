@@ -88,7 +88,7 @@ More accessory options
 Custom color picker for accessories
 Alpaca collection gallery
 
-🤝 Contributing
+🤝🏾 Contributing
 
 Fork the repository
 Create a feature branch (git checkout -b feature/amazing-feature)
@@ -98,7 +98,7 @@ Open a Pull Request
 
 📄 License
 This project is open source and available under the MIT License.
-🙏 Acknowledgments
+🙏🏾 Acknowledgments
 
 Inspired by the CodeMentor.io Alpaca Image Generator project
 Alpaca illustrations and assets
