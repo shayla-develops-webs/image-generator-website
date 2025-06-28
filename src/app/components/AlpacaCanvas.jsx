@@ -1,5 +1,8 @@
 import Image from "next/image";
-function AlpacaCanvas() {
+function AlpacaCanvas({ selectedStyles = {} }) {
+  const visible = (id) => {
+    return Object.values(selectedStyles).includes(id) ? "visible" : "hidden";
+  };
   return (
     <div className="alpaca-box w-[25rem] h-[25rem] bg-blue-200 relative border-2 border-solid mt-[3.75rem] ml-[3.75rem]">
       <div className="image-stack">
@@ -40,72 +43,63 @@ function AlpacaCanvas() {
           src="/images/eyes/default.png"
           alt="default alpaca eyes"
           fill
-          className="object-contain"
-          class="visible"
+          className={`object-contain pl-7 pb-3 ${visible("default-eyes")}`}
         />
         <Image
           id="angry-eyes"
           src="/images/eyes/angry.png"
           alt="angry alpaca eyes"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("angry-eyes")}`}
         />
         <Image
           id="naughty-eyes"
           src="/images/eyes/naughty.png"
           alt="naughty alpaca eyes"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("naughty-eyes")}`}
         />
         <Image
           id="star-eyes"
           src="/images/eyes/star.png"
           alt="star alpaca eyes"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("star-eyes")}`}
         />
         <Image
           id="default-mouth"
           src="/images/mouth/default.png"
           alt="default alpaca mouth"
           fill
-          className="object-contain"
-          class="visible"
+          className={`object-contain pl-7 pb-3 ${visible("default-mouth")}`}
         />
         <Image
           id="astonished-mouth"
           src="/images/mouth/astonished.png"
           alt="astonished alpaca mouth"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("astonished-mouth")}`}
         />
         <Image
           id="eating-mouth"
           src="/images/mouth/eating.png"
           alt="eating alpaca mouth"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("eating-mouth")}`}
         />
         <Image
           id="laugh-mouth"
           src="/images/mouth/laugh.png"
           alt="laughing alpaca mouth"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("laughing-mouth")}`}
         />
         <Image
           id="tongue-mouth"
           src="/images/mouth/tongue.png"
           alt="tongue sticking out alpaca mouth"
           fill
-          className="object-contain"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("tongue-mouth")}`}
         />
         <Image
           id="default-ears"
@@ -168,40 +162,35 @@ function AlpacaCanvas() {
           src="/images/hair/short.png"
           alt="alpaca short hair"
           fill
-          className="object-contain pl-7 pb-3"
-          class="visible"
+          className={`object-contain pl-7 pb-3 ${visible("short-hair")}`}
         />
         <Image
           id="bang-hair"
           src="/images/hair/bang.png"
           alt="alpaca bang hair"
           fill
-          className="object-contain pl-7 pb-3"
-          class="hidden"
+          className={`object-contain pl-10 pb-3 ${visible("bang-hair")}`}
         />
         <Image
           id="curls-hair"
           src="/images/hair/curls.png"
           alt="alpaca curly hair"
           fill
-          className="object-contain pl-7 pb-3"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("curls-hair")}`}
         />
         <Image
           id="elegant-hair"
           src="/images/hair/elegant.png"
           alt="alpaca elegant hair"
           fill
-          className="object-contain pl-7 pb-3"
-          class="hidden"
+          className={`object-contain pl-7 pb-3 ${visible("elegant-hair")}`}
         />
         <Image
           id="fancy-hair"
           src="/images/hair/fancy.png"
           alt="alpaca fancy hair"
           fill
-          className="object-contain pl-7 pb-3"
-          class="hidden"
+          className={`object-contain pl-10 pb-3 ${visible("fancy-hair")}`}
         />
         <Image
           id="earing-accessory"

@@ -1,30 +1,45 @@
-function AccessoryPanel() {
+function AccessoryPanel({ onShowOptions }) {
   return (
     <div>
       <h3 className="font-mono">Accessorize Your Alpaca</h3>
       <div className="grid grid-cols-3 gap-3">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button
+          onClick={() => onShowOptions("hair")}
+          class="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+        >
           Hair
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button
+          onClick={() => onShowOptions("ears")}
+          className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+        >
           Ears
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button
+          onClick={() => onShowOptions("eyes")}
+          className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+        >
           Eyes
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button
+          onClick={() => onShowOptions("mouth")}
+          className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+        >
           Mouth
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full">
           Neck
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button
+          onClick={() => onShowOptions("leg")}
+          className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+        >
           Leg
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full">
           Accessories
         </button>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        <button className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full">
           Background
         </button>
       </div>
