@@ -18,6 +18,22 @@ function StyleOptions({ accessory, onSelectStyle }) {
       "laugh-mouth",
       "tongue-mouth",
     ],
+    ears: ["default-ears", "tiltforward-ears", "tiltbackwards-ears"],
+    leg: ["default-leg", "bubbletea-leg", "cookie-leg", "gameconsole-leg"],
+    accessories: [
+      "earing-accessory",
+      "flower-accessory",
+      "headphone-accessory",
+      "glasses-accessory",
+    ],
+    neck: ["default-neck", "bend-forward-neck", "bend-backward-neck"],
+    background: [
+      "dark-blue-background",
+      "green-background",
+      "red-background",
+      "yellow-background",
+    ],
+    nose: ["nose"],
   };
 
   const currentOptions = options[accessory] || [];
