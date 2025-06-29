@@ -2,7 +2,7 @@ import React from "react";
 import { toPng } from "html-to-image";
 import download from "downloadjs";
 
-function ActionButtons({ targetRef, fileName = "image.png" }) {
+function ActionButtons({ targetRef, fileName = "image.png", onRandomize }) {
   function handleDownload() {
     console.log("download");
 
@@ -39,8 +39,10 @@ function ActionButtons({ targetRef, fileName = "image.png" }) {
 
   function handleRandomize() {
     console.log("randomize");
-    {
-      /* add randomize logic here */
+    if (onRandomize) {
+      onRandomize();
+    } else {
+      console.warn("No onRandomize prop passed to ActionButtons");
     }
   }
 
