@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import AlpacaCanvas from "@/app/components/AlpacaCanvas";
 import AccessoryPanel from "@/app/components/AccessoryPanel";
 import StyleOptions from "@/app/components/StyleOptions";
@@ -14,6 +14,10 @@ export default function Home() {
   const handleShowOptions = (accessoryType) => {
     setSelectedAccessory(accessoryType);
   };
+  {
+    /* downbutton declared */
+  }
+  const contentRef = useRef(null);
   {
     /* logic for style panel selections */
   }
@@ -32,6 +36,7 @@ export default function Home() {
       <div className="flex gap-20">
         <AlpacaCanvas
           className="flex-shrink-0"
+          ref={contentRef}
           selectedStyles={selectedStyles}
         />
         <div className="flex flex-col gap-4">
@@ -45,7 +50,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-15 pl-15">
-        <ActionButtons />
+        <ActionButtons targetRef={contentRef} fileName="my-alpaca.png" />
       </div>
     </div>
   );

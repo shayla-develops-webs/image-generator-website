@@ -1,11 +1,17 @@
 import Image from "next/image";
-function AlpacaCanvas({ selectedStyles = {} }) {
+import React, { useRef, useImperativeHandle, forwardRef } from "react";
+
+function AlpacaCanvas({ selectedStyles = {} }, ref) {
+  const contentRef = useRef(null);
+  useImperativeHandle(ref, () => ({
+    getElement: () => contentRef.current,
+  }));
   const visible = (id) => {
     return Object.values(selectedStyles).includes(id) ? "visible" : "hidden";
   };
   return (
     <div className="alpaca-box w-[25rem] h-[25rem] bg-blue-200 relative border-2 border-solid mt-[3.75rem] ml-[3.75rem]">
-      <div className="image-stack">
+      <div ref={contentRef} className="image-stack">
         <Image
           id="default-neck"
           src="/images/neck/default.png"
@@ -260,4 +266,4 @@ function AlpacaCanvas({ selectedStyles = {} }) {
   );
 }
 
-export default AlpacaCanvas;
+export default forwardRef(AlpacaCanvas);
