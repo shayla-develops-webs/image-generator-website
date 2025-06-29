@@ -24,6 +24,8 @@ Styling: Tailwind CSS - Utility-first CSS framework
 Language: JavaScript/JSX
 Package Manager: npm
 
+View the Demo here 👉🏾 (https://alpaca-generator-website-1bidjrb7x.vercel.app/)
+
 📦 Installation
 
 Clone the repository
