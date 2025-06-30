@@ -11,12 +11,17 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
   };
   return (
     <div className="alpaca-box w-[25rem] h-[25rem] bg-blue-200 relative border-2 border-solid mt-[3.75rem] ml-[3.75rem]">
-      <div ref={contentRef} className="image-stack">
+      <div
+        ref={contentRef}
+        className="image-stack relative w-full h-full"
+        style={{ position: "relative", width: "100%", height: "100%" }}
+      >
         <Image
           id="default-neck"
           src="/images/neck/default.png"
           alt="default alpaca neck"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-1 pl-7 pb-0 ${visible("default-neck")}`}
         />
         <Image
@@ -24,6 +29,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/neck/bend-backward.png"
           alt="alpaca neck bending backwards"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-1 pl-7 pb-0 ${visible(
             "bend-backward-neck"
           )}`}
@@ -33,6 +39,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/neck/bend-forward.png"
           alt="alpaca neck bending forwards"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-1 pl-7 pb-0 ${visible(
             "bend-forward-neck"
           )}`}
@@ -42,6 +49,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/eyes/default.png"
           alt="default alpaca eyes"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-3 pl-7 pb-0 ${visible("default-eyes")}`}
         />
         <Image
@@ -49,6 +57,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/eyes/angry.png"
           alt="angry alpaca eyes"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-3  pl-7 pb-0 ${visible("angry-eyes")}`}
         />
         <Image
@@ -56,6 +65,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/eyes/naughty.png"
           alt="naughty alpaca eyes"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible("naughty-eyes")}`}
         />
         <Image
@@ -63,6 +73,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/eyes/star.png"
           alt="star alpaca eyes"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible("star-eyes")}`}
         />
         <Image
@@ -70,6 +81,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/nose.png"
           alt="default alpaca nose"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-3 pl-7 pb-0 ${visible("nose")}`}
         />
         <Image
@@ -77,6 +89,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/mouth/default.png"
           alt="default alpaca mouth"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible("default-mouth")}`}
         />
         <Image
@@ -84,6 +97,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/mouth/astonished.png"
           alt="astonished alpaca mouth"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible(
             "astonished-mouth"
           )}`}
@@ -93,6 +107,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/mouth/eating.png"
           alt="eating alpaca mouth"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible("eating-mouth")}`}
         />
         <Image
@@ -100,6 +115,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/mouth/laugh.png"
           alt="laughing alpaca mouth"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible("laugh-mouth")}`}
         />
         <Image
@@ -107,6 +123,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/mouth/tongue.png"
           alt="tongue sticking out alpaca mouth"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-4 pl-7 pb-0 ${visible("tongue-mouth")}`}
         />
         <Image
@@ -114,6 +131,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/ears/default.png"
           alt="default alpaca ears"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-1 pl-7 pb-0 ${visible("default-ears")}`}
         />
         <Image
@@ -121,6 +139,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/ears/tilt-backward.png"
           alt="alpaca ears tilting backwards"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-1 pl-7 pb-0 ${visible(
             "tiltbackwards-ears"
           )}`}
@@ -130,6 +149,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/ears/tilt-forward.png"
           alt="alpaca ears tilting forewards"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-1 pl-7 pb-0 ${visible(
             "tiltforward-ears"
           )}`}
@@ -139,6 +159,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/leg/default.png"
           alt="alpaca default leg"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-2 pl-7 pb-0 ${visible("default-leg")}`}
         />
         <Image
@@ -146,6 +167,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/leg/bubble-tea.png"
           alt="alpaca bubble tea leg"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-2 pl-7 pb-0 ${visible("bubbletea-leg")}`}
         />
         <Image
@@ -153,6 +175,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/leg/cookie.png"
           alt="alpaca cookie leg"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-2 pl-7 pb-0 ${visible("cookie-leg")}`}
         />
         <Image
@@ -160,6 +183,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/leg/game-console.png"
           alt="alpaca game console leg"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-2 pl-7 pb-0 ${visible("gameconsole-leg")}`}
         />
         <Image
@@ -167,6 +191,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/hair/short.png"
           alt="alpaca short hair"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-5 pl-7 pb-0 ${visible("short-hair")}`}
         />
         <Image
@@ -174,6 +199,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/hair/bang.png"
           alt="alpaca bang hair"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-5 pl-10 pb-0 ${visible("bang-hair")}`}
         />
         <Image
@@ -181,6 +207,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/hair/curls.png"
           alt="alpaca curly hair"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-5 pl-7 pb-0 ${visible("curls-hair")}`}
         />
         <Image
@@ -188,6 +215,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/hair/elegant.png"
           alt="alpaca elegant hair"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-5 pl-7 pb-0 ${visible("elegant-hair")}`}
         />
         <Image
@@ -195,6 +223,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/hair/fancy.png"
           alt="alpaca fancy hair"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-5 pl-15 pb-0 ${visible("fancy-hair")}`}
         />
         <Image
@@ -202,6 +231,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/accessories/earings.png"
           alt="alpaca with earings"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-6 pl-8 pb-0 ${visible(
             "earing-accessory"
           )}`}
@@ -211,6 +241,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/accessories/flower.png"
           alt="alpaca with flower on ear"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-6 pl-7 pb-0 ${visible(
             "flower-accessory"
           )}`}
@@ -220,6 +251,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/accessories/glasses.png"
           alt="alpaca with glasses"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-6 pl-7 pb-0 ${visible(
             "glasses-accessory"
           )}`}
@@ -229,6 +261,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/accessories/headphone.png"
           alt="alpaca with headphones"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-6 pl-7 pb-0 ${visible(
             "headphone-accessory"
           )}`}
@@ -238,6 +271,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/backgrounds/darkblue50.png"
           alt="dark blue background"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-0 ${visible("dark-blue-background")}`}
         />
         <Image
@@ -245,6 +279,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/backgrounds/green60.png"
           alt="green background"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-0 ${visible("green-background")}`}
         />
         <Image
@@ -252,6 +287,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/backgrounds/red60.png"
           alt="red background"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-0 ${visible("red-background")}`}
         />
         <Image
@@ -259,6 +295,7 @@ function AlpacaCanvas({ selectedStyles = {} }, ref) {
           src="/images/backgrounds/yellow50.png"
           alt="yellow background"
           fill
+          crossOrigin="anonymous"
           className={`object-cover z-0 ${visible("yellow-background")}`}
         />
       </div>

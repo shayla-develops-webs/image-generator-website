@@ -1,6 +1,5 @@
 import React from "react";
-import { toPng } from "html-to-image";
-import download from "downloadjs";
+import html2canvas from "html2canvas";
 
 function ActionButtons({ targetRef, fileName = "image.png", onRandomize }) {
   function handleDownload() {
@@ -24,13 +23,16 @@ function ActionButtons({ targetRef, fileName = "image.png", onRandomize }) {
     {
       /* Generate and download the image */
     }
-    toPng(element, {
-      quality: 1.0,
-      backgroundColor: "#ffffff",
+    html2canvas(element, {
+      backgroundColor: null,
+      useCORS: true,
     })
-      .then((dataUrl) => {
-        download(dataUrl, fileName);
-        console.log("Image downloaded successfully");
+      .then((canvas) => {
+        const dataUrl = canvas.toDataURL("image/png");
+        const link = document.createElement("a");
+        link.href = dataUrl;
+        link.download = fileName;
+        link.click();
       })
       .catch((error) => {
         console.error("Error generating image:", error);

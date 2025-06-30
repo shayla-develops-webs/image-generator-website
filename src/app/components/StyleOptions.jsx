@@ -39,7 +39,7 @@ function StyleOptions({ accessory, onSelectStyle }) {
   const currentOptions = options[accessory] || [];
   return (
     <div>
-      <h3 className="font-mono">Style</h3>
+      <h3 className="font-mono text-gray-900">Style</h3>
       <div className="grid grid-cols-3 gap-3">
         {currentOptions.map((option) => (
           <button

@@ -1,7 +1,7 @@
 function AccessoryPanel({ onShowOptions }) {
   return (
     <div>
-      <h3 className="font-mono">Accessorize Your Alpaca</h3>
+      <h3 className="font-mono text-red-900">Accessorize Your Alpaca</h3>
       <div className="grid grid-cols-3 gap-3">
         <button
           onClick={() => onShowOptions("nose")}
