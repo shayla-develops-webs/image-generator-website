@@ -1,17 +1,17 @@
 function AccessoryPanel({ onShowOptions }) {
   return (
     <div>
-      <h3 className="font-mono text-red-900">Accessorize Your Alpaca</h3>
+      <h3 className="font-mono text-gray-900">Accessorize Your Alpaca</h3>
       <div className="grid grid-cols-3 gap-3">
         <button
           onClick={() => onShowOptions("nose")}
-          class="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+          className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
         >
           Nose
         </button>
         <button
           onClick={() => onShowOptions("hair")}
-          class="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
+          className="bg-blue-500 hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-green-500 text-white font-bold py-2 px-4 rounded-full"
         >
           Hair
         </button>
